@@ -249,7 +249,7 @@ class SaleOrderAjax extends \CBitrixComponent
 		  "LID"               => SITE_ID,
 		  "ACTIVE"            => "Y",
 		  "UF_COMPANY_NAME"   => $company_name,
-		  "GROUP_ID"          => $arr_group_ids, //Зарегистрированные пользователи + физ или юр лица
+		  "GROUP_ID"          => $arr_group_ids,
 		  "PASSWORD"          => $password,
 		  "CONFIRM_PASSWORD"  => $password,
 		);
