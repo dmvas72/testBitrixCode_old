@@ -110,8 +110,7 @@ class SaleOrderAjax extends \CBitrixComponent
         }
     }
 
-	protected function createVirtualOrder()
-	{
+	protected function createVirtualOrder() {
 		global $USER;
 
 		try {
@@ -138,8 +137,7 @@ class SaleOrderAjax extends \CBitrixComponent
 		}
 	}
 
-	protected function setOrderProps()
-	{
+	protected function setOrderProps() {
 		global $USER;
         
 		$arUser = $USER->GetByID(intval($USER->GetID()))
