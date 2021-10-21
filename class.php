@@ -297,7 +297,6 @@ class SaleOrderAjax extends \CBitrixComponent
 				$arResult["ACCOUNT_NUMBER"] = $this->order->getField('ACCOUNT_NUMBER');
 				$result['status'] = "success";
 				$result['order_id'] = $arResult["ORDER_ID"];
-				
 			}
 			else {
 				$result['status'] = "error";
