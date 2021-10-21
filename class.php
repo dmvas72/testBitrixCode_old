@@ -130,8 +130,8 @@ class SaleOrderAjax extends \CBitrixComponent
 			$this->order->setBasket($basketItems);
 
 			$this->setOrderProps();
-	    $this->createShipment();
-	    $this->createPaymentSystem();
+		$this->createShipment();
+		$this->createPaymentSystem();
 
 		} catch (\Exception $e) {
 			$this->errors[] = $e->getMessage();
