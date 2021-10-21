@@ -112,26 +112,26 @@ class SaleOrderAjax extends \CBitrixComponent
 
 	protected function createVirtualOrder() {
 		global $USER;
-
+ 
 		try {
 			$siteId = \Bitrix\Main\Context::getCurrent()->getSite();
 			$basketItems = \Bitrix\Sale\Basket::loadItemsForFUser(
 				\CSaleBasket::GetBasketUserID(), 
 				$siteId
 			)->getOrderableItems();
-
+ 
 			if (count($basketItems) == 0) {
 				LocalRedirect($this->arParams['PATH_TO_BASKET']);
 			}
-
+ 
 			$this->order = \Bitrix\Sale\Order::create($siteId, $USER->GetID());
 			$this->order->setPersonTypeId($this->arParams['PERSON_TYPE_ID']);
 			$this->order->setBasket($basketItems);
 
 			$this->setOrderProps();
-		$this->createShipment();
-		$this->createPaymentSystem();
-
+            $this->createShipment();
+            $this->createPaymentSystem();
+            
 		} catch (\Exception $e) {
 			$this->errors[] = $e->getMessage();
 		}
