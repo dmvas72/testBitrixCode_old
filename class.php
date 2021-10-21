@@ -157,9 +157,7 @@ class SaleOrderAjax extends \CBitrixComponent
 			switch ($prop->getField('CODE')) {
 				case 'FIO':
 					$value = trim($this->request['fio']);
-					if (empty($value)) {
-						$value = $arUser['FIO'];
-					}
+					if (empty($value)) $value = $arUser['FIO'];
 					break;
 					
 				case 'EMAIL':
